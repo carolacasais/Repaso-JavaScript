@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 127</title>
+</head>
+
+<body>
+    <h2>Escriba un programa JavaScript para probar si una matriz de enteros de longitud 2 no contiene 1 o 3. R:78
+    </h2>
+
+    <div style="text-align: center;">
+        <p>Escribe un arreglo y haz click en el botón para probar si una matriz de enteros de longitud 2 no contiene 1 o 3. </p><br><br>
+    </div>
+
+    <div style="text-align: center;">
+        <label for="nums">Escriba un arreglo:</label>
+        <input type="text" id="nums"><br><br>
+        <button onclick="not13()">Haz click</button>
+    </div>
+
+    <div style="text-align: center;color:red;font-weight:bold;">
+        <p id="resp"> </p>
+    </div>
+
+
+    <script>
+        function not13(nums){
+            if (nums.indexOf(1) == -1 && nums.indexOf(3) == -1) {
+                return true;
+            } else {
+                return false;
+            }
+            document.getElementById("resp").innerHTML = "La matriz no contiene 1 o 3:"; //esto para la solucion
+        }
+
+        console.log(not13([5, 6]));
+        console.log(not13([3, 1]));
+        console.log(not13([0, 1]));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio JavaScript 118</title>
+</head>
+
+<body>
+    <h3>
+        118 Escriba un programa JavaScript para encontrar que el 1 de enero será domingo entre 2014 y 2050. R:7</h3>
+    <br /><br />
+
+
+<h3>Aquí puedes consultar todos los 1 de enero que fueron o que serán domingo de 2014 a 2050</h3>
+
+
+        <script>
+ function EsLunes()
+{
+	var AnoActual = 2014;
+    var AnoMaximo = 2050;
+    
+    var FechaAConocer = new Date("2014-01-01");
+    var numeroDia = 0;   
+    while(AnoActual < AnoMaximo)
+    {
+		numeroDia = FechaAConocer.getDay(); //Obtengo el número
+        
+        if(numeroDia == 0)
+        {
+	        document.write('El número de día es ' + numeroDia + ' -- El Año es el ' + AnoActual);
+    	    document.write('<br />');
+        }
+        
+        AnoActual = AnoActual +1;
+        FechaAConocer = new Date(AnoActual + "-01-01"); 
+        
+    }
+}
+EsLunes();
+    </script>
+
+</body>
+
+</html>

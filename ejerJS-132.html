@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 132</title>
+</head>
+
+<body>
+    <h2>Escriba un JavaScript para sumar dos enteros positivos sin acarreo. R:82
+    </h2>
+
+    <div style="text-align: center;">
+        <p>Haz click en el botón para sumar los dos números</p><br><br>
+    </div>
+
+    <div style="text-align: center;">
+        <label for="n1">Escriba un número:</label>
+        <input type="text" id="nums"><br><br>
+        <label for="n2">Escriba otro número:</label>
+        <input type="text" id="nums"><br><br>
+        <button onclick="suma_dos_nums()">Sumar números</button>
+    </div>
+
+    <div style="text-align: center;color:red;font-weight:bold;">
+        <p id="resp"> </p>
+    </div>
+
+    <script>
+        function suma_dos_nums(n1, n2; {
+            var result = 0;
+            x = 1;
+
+            while (n1 > 0 && n2 > 0) {
+                result += x * ((n1 + n2) % 10);
+                n1 = Math.floor(n1 / 10);
+                n2 = Math.floor(n2 / 10);
+                x*=10;
+            }
+            return result;
+            document.getElementById("resp").innerHTML = "El número obtenido es: [" + result + "]";
+        }
+        console.log(suma_dos_nums(222, 111));
+        console.log(suma_dos_nums(531, 223));
+    </script>
+</body>
+
+</html>

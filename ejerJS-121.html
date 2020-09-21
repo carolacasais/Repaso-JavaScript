@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio JavaScript 121</title>
+</head>
+
+<body>
+    <h3> ```
+        121 ``` Escriba un programa JavaScript para verificar si el primer y último elemento son iguales a una matriz
+        dada de enteros de longitud 3. R:72.</h3>
+    <br /><br />
+
+
+    <script>
+
+        function Ejercicio120(MatrizRecibida) {
+            document.write('<br />LA FUNCIÓN EMPIEZA<br />');
+
+            var MatrizEnteros = MatrizRecibida;
+
+            document.write('La matriz que he recibido es:<br />' + MatrizEnteros + '<br />');
+
+            //La longitud de la matriz debe ser mayor o igual a 1.
+            if (MatrizEnteros.length > 0) {
+                if (MatrizEnteros[0] == 1) {
+                    document.write('EL PRIMERO ES 1<br />');
+                }
+                if (MatrizEnteros[MatrizEnteros.length - 1] == 1) {
+                    document.write('EL ÚLTIMO ES 1<br />');
+                }
+            }
+            else {
+                alert('La matriz es muy chiquitita');
+            }
+
+            document.write('<br />LA FUNCIÓN TERMINA<br />');
+        }
+
+        //Llamamos a la función proporcionándole las matrices que queremos analizar
+        Ejercicio120([1, 4, 2, 6]);
+        Ejercicio120([7, 8, 1, 4, 2, 6]);
+        Ejercicio120([9, 9, 9, 1, 4, 2, 6]);
+        Ejercicio120([1, 4, 1]);
+
+
+    </script>
+
+</body>
+
+</html>

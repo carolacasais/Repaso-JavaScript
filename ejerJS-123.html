@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio JavaScript 123</title>
+</head>
+
+<body>
+    <h3> 123  Escriba un programa JavaScript para encontrar el valor más grande entre el primero o el último y
+        establezca todos los demás elementos con ese valor. Muestre la nueva matriz. R:74 </h3>
+    <br /><br />
+
+
+    <script>
+function Ejercicio123()
+{
+	var MatrizInicial = [5, 4, 6, 8, 900];
+    var PrimerElemento = MatrizInicial[0];
+    var UltimoElemento = MatrizInicial[MatrizInicial.length - 1];
+    var ValorDeReferencia = 0;
+    
+    document.write ('Primero: ' + PrimerElemento + ' Ultimo: ' + UltimoElemento + '<br />');
+    
+    if(PrimerElemento > UltimoElemento)
+    {
+    	//Hará esto si el primero es mayor que el último
+        ValorDeReferencia = PrimerElemento;
+    }
+    else if (PrimerElemento <= UltimoElemento)
+    {
+    	//Hará esto otro si el último es MENOR O IGUAL que el primero
+        ValorDeReferencia = UltimoElemento;
+    }
+    
+    //Esto lo escribo para que sepas que es igual a todo el bloque IF anterior
+    //ValorDeReferencia = PrimerElemento > UltimoElemento ? PrimerElemento : UltimoElemento;
+    
+    var NuevaMatriz = [];
+    for (i = 0; i < MatrizInicial.length; i++)
+    {
+    	NuevaMatriz[i] = ValorDeReferencia;
+    }
+    
+    document.write('NuevaMatriz = ' + NuevaMatriz);
+    
+}
+
+Ejercicio123();
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 133</title>
+</head>
+
+<body>
+    <h2>Escriba un JavaScript para encontrar la cadena más larga de una matriz dada de cadenas. R:83
+    </h2>
+
+    <label for="max">Primera Cadena:</label>
+    <input type="text" id="arra"><br><br>
+    <button type="button" onclick="encuentra_cadena();">Encontrar la cadena</button>
+
+    <script>
+        function encuentra_cadena(arra) {
+            var max = arra[0].length;
+            arra.map(v => max = Math.max(max, v.length));
+            result = arra.filter(v => v.length == max);
+            return result
+            alert("La cadena más larga es: " + max);
+        }
+        console.log(encuentra_cadena(['a', 'aa', 'aaa', 'aaaaaaaa', 'aaaa']));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio JavaScript 119</title>
+</head>
+
+<body>
+    <h3>119	Escriba un programa JavaScript para rotar los elementos a la izquierda de un arreglo dado de enteros de longitud 3.	</h3>
+    <br /><br />
+
+
+    <div style="text-align: center; width:80%;">
+        <label for="n1">Escriba aquí un número:</label>
+        <input type="text" id="n1"><br><br>
+        <label for="n2">Escriba aquí un número:</label>
+        <input type="text" id="n2"><br><br>
+        <label for="n3">Escriba aquí un número:</label>
+        <input type="text" id="n3"><br><br>
+
+
+        <button type="button" onclick="desplazaNumeros();">Desplaza a la izquierda</button>
+    </div>
+
+    <div style="text-align: center;">
+        <p id="resp"> </p>
+    </div>
+
+    <script>
+        function desplazaNumeros() {
+            var num1 = document.getElementById("n1").value;
+            var num2 = document.getElementById("n2").value;
+            var num3 = document.getElementById("n3").value;
+            var compo1 = parseInt(num1);
+            var compo2 = parseInt(num2);
+            var compo3 = parseInt(num3);
+            miArray[0] = compo1;
+            miArray[1] = compo2;
+            miArray[2] = compo3;
+            
+            document.getElementById("resp").innerHTML = "La cadena final es " + miArray;
+        }
+    </script>
+
+</body>
+
+</html>

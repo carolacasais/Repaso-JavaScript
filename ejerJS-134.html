@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 134</title>
+</head>
+
+<body>
+    <h2>Escriba un JavaScript para reemplazar cada carácter de una cadena dada por el siguiente en el alfabeto inglés.
+        Nota: 'a' será reemplazada por 'b' o 'z' será reemplazada por 'a'. R:84
+    </h2>
+
+    <div style="text-align: center;">
+        <p>Haz click en el botón para reemplazar cada carácter de una cadena dada por el siguiente en el alfabeto inglés. </p><br><br>
+    </div>
+
+    <div style="text-align: center;">
+        <label for="str">Escriba un arreglo:</label>
+        <input type="text" id="str"><br><br>
+        <button onclick="alphabet_change()">Crear arreglo</button>
+    </div>
+
+    <div style="text-align: center;color:red;font-weight:bold;">
+        <p id="resp"> </p>
+
+    <script>
+        function alphabet_change(str) {
+            var all_chars = str.split("");
+            for (var i = 0; i < all_chars.length; i++) {
+                var n = all_chars[i].charCodeAt() - 'a'.charCodeAt();
+                n = (n + 1) % 26;
+                all_chars[i] = String.fromCharCode(n + 'a'.charCodeAt());
+            }
+            return all_chars.join("");
+            document.getElementById("resp").innerHTML = "El nuevo arreglo obtenido es: [" + all_chars + "]";
+        }
+        console.lof(alphabet.change("abcdefghij"));
+    </script>
+</body>
+
+</html>

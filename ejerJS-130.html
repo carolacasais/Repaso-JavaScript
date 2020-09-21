@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 130</title>
+</head>
+
+<body>
+    <h2>Escriba un programa JavaScript para intercambiar el primer y último elemento de una matriz dada de números
+        enteros. La longitud de la matriz debe ser de al menos 1. R:80
+    </h2>
+
+    
+    <div style="text-align: center;">
+        <p>Haz click en el botón para intercambiar el primer y último número de la matriz.</p><br><br>
+    </div>
+
+    <div style="text-align: center;">
+        <label for="arra">Escriba un arreglo:</label>
+        <input type="text" id="nums"><br><br>
+        <button onclick="cambio()">Intercambiar números</button>
+    </div>
+
+    <div style="text-align: center;color:red;font-weight:bold;">
+        <p id="resp"> </p>
+    </div>
+
+    <script>
+        function cambio(arra) {
+            [arra[0], arra[arra.lenght -1]] = [arra[arra.lenght -1], arra[0]];
+            return arra;
+            document.getElementById("resp").innerHTML = "El nuevo arreglo obtenido es: [" + arra + "]";
+        }
+        console.log(cambio([1, 2, 3, 4]));
+        console.log(cambio([6, 7, 8]));
+        console.log(cambio([4]));
+    </script>
+</body>
+
+</html>

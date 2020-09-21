@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 136</title>
+</head>
+
+<body>
+    <h2>Escriba un programa JavaScript para encontrar los tipos de un ángulo dado. Tipos de ángulos: Ángulo agudo: un
+        ángulo entre 0 y 90 grados. Ángulo recto: un ángulo de 90 grados. Ángulo obtuso: ángulo entre 90 y 180 grados.
+        Ángulo recto: un ángulo de 180 grados. R:86
+    </h2>
+
+    <div style="text-align: center;">
+        <p>Haz click en el botón para descubrir el tipo de ángulo</p><br><br>
+    </div>
+
+    <div style="text-align: center;">
+        <label for="angle">Escriba un grado:</label>
+        <input type="text" id="angle"><br><br>
+        <button onclick="angle_type()">Descubir ángulo</button>
+    </div>
+
+    <script>
+        function angle_type(angle) {
+            if (angle<90) {
+                alert("ángulo agudo");
+            }
+            if (angle===90) {
+                alert("Angulo recto");
+            }
+            if (angle<180) {
+                alert("Angulo obtuso");
+            }
+            alert("Angulo recto");
+        }
+        console.log(angle_type(48));
+        console.log(angle_type(90));
+        console.log(angle_type(170));
+    </script>
+</body>
+
+</html>

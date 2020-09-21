@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio JavaScript 114</title>
+</head>
+
+<body>
+    <h3>Escriba un programa JavaScript para mostrar el nombre de la ciudad si la cadena
+        comienza con "Los" o "New"; de lo contrario, vuelva en blanco. R:66.</h3><br /><br />
+
+    <br><br>
+    <div style="text-align: center; width:80%;">
+        <label for="cad1">Escriba el nombre de una ciudad:</label>
+        <input type="text" id="arr"><br><br>
+        <button type="button" onclick="verificarCiudad();">Verifica tu ciudad</button>
+    </div>
+
+
+    <div style="text-align: center;">
+        <p id="resp">   </p>
+    </div>
+
+
+    <script>
+        function verificarCiudad() {
+            var arr1 = document.getElementById("arr").value;
+            arr1 = arr1.trim();
+            var cad = arr1.substring(0, 3);
+            cad1 = cad.toUpperCase();
+            if ((cad1 === "LOS") || (cad1 === "NEW")) {
+                document.getElementById("resp").innerHTML = "La ciudad contiene el nombre de " + cad;
+            }
+            else {
+                document.getElementById("resp").innerHTML = "Esa ciudad no es la que me gusta ";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

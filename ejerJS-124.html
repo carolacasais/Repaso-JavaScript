@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio JavaScript 124</title>
+</head>
+
+<body>
+    <h3> 124 Escriba un programa JavaScript para crear una nueva matriz tomando los elementos del medio de las dos
+        matrices de enteros y cada longitud 3. R:75 </h3>
+    <br /><br />
+
+
+    <script>
+        
+        function Ejercicio124()
+{
+	var Matriz_01 = [4, 5, 6, 8, 9];
+    var Matriz_02 = [7, 8, 9, 4, 5];
+    var NuevaMatriz = [];
+    var PosicionDelNumeroExtraido = 0;
+    
+    //ESTO ES PARA LA PRIMERA MATRIZ
+    for(i = 0; i < Matriz_01.length; i++)
+    {
+    	//!= es lo mismo que escribir NO ES IGUAL A
+        //&& significa AND
+    	if(i != 0 && i != Matriz_01.length - 1)
+        {
+        	NuevaMatriz[PosicionDelNumeroExtraido] = Matriz_01[i];
+            PosicionDelNumeroExtraido++;
+        	document.write (Matriz_01[i] + '<br />');
+        }
+    }
+    
+    //PARA LA SEGUNDA
+    for(i = 0; i < Matriz_02.length; i++)
+    {
+    	//!= es lo mismo que escribir NO ES IGUAL A
+        //&& significa AND
+    	if(i != 0 && i != Matriz_02.length - 1)
+        {
+        	NuevaMatriz[PosicionDelNumeroExtraido] = Matriz_02[i];
+            PosicionDelNumeroExtraido++;
+        	document.write (Matriz_02[i] + '<br />');
+        }
+    }
+    
+    
+    
+    document.write ('La matriz resultante es: ' + NuevaMatriz + '<br />');
+}
+
+Ejercicio124();
+
+
+    </script>
+
+</body>
+
+</html>
