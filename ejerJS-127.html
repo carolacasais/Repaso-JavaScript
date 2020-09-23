@@ -27,13 +27,13 @@
 
 
     <script>
-        function not13(nums){
+        function not13(){
+            var nums = document.getElementById("nums").value;
             if (nums.indexOf(1) == -1 && nums.indexOf(3) == -1) {
-                return true;
+                document.getElementById("resp").innerHTML = "El arreglo no contiene el número 1 o 3:"; //esto para la solucion
             } else {
-                return false;
+                document.getElementById("resp").innerHTML = "El arreglo contiene el número 1 o 3:"; //esto para la solucion
             }
-            document.getElementById("resp").innerHTML = "La matriz no contiene 1 o 3:"; //esto para la solucion
         }
 
         console.log(not13([5, 6]));
