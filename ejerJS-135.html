@@ -28,18 +28,20 @@
     </div>
 
     <script>
-        function alternate_Sums(arr) {
+        function alternate_Sums() {
+            var arr = document.getElementById("arr").value;
+            var inverso = [];
+            arr = arr.replace(/\s+/g,'');
+            var ar1 = arr.split(',');
             var result = [0, 0];
-            for (var i = 0; i < arr.length; i++)
+            for (var i = 0; i < ar1.length; i++)
             {
-                if (i % 2) result[1] += arr[i];
+                if (i % 2) result[1] += parseInt(ar1[i]);
                 else
-                result[0] += arr[i];
+                result[0] += parseInt(ar1[i]);
             }
-            return result
-            document.getElementById("resp").innerHTML = "El nuevo arreglo dividido es: [" + result + "]";
+            document.getElementById("resp").innerHTML = "El arreglo con la suma de las partes es: [" + result + "]";
         }
-        console.log(alternate_Sums([1, 3, 6, 2, 5, 10]))
     </script>
 </body>
 

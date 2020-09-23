@@ -8,37 +8,55 @@
 </head>
 
 <body>
-    <h2>Escriba un programa JavaScript para encontrar los tipos de un ángulo dado. Tipos de ángulos: Ángulo agudo: un
-        ángulo entre 0 y 90 grados. Ángulo recto: un ángulo de 90 grados. Ángulo obtuso: ángulo entre 90 y 180 grados.
-        Ángulo recto: un ángulo de 180 grados. R:86
+    <h2 style="text-align: center;">Escriba un programa JavaScript para encontrar los tipos de un ángulo dado.  R:86
     </h2>
-
-    <div style="text-align: center;">
-        <p>Haz click en el botón para descubrir el tipo de ángulo</p><br><br>
+    <br><br>
+    <h3 style="text-align:center;">Tipos de ángulos:</h3>
+    <div>
+        <table width ="400px" style="margin-left:auto; margin-right:auto;">
+            <tr>
+                <td>
+                    <ul>
+                        <li><strong>Ángulo agudo:</strong> un ángulo entre 0 y 90 grados.</li>
+                        <li><strong>Ángulo recto:</strong> un ángulo de 90 grados.</li>
+                        <li><strong>Ángulo obtuso:</strong> ángulo entre 90 y 180 grados.</li>
+                        <li><strong>Ángulo llano:</strong> un ángulo de 180 grados.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
 
+    <br><br>
     <div style="text-align: center;">
-        <label for="angle">Escriba un grado:</label>
-        <input type="text" id="angle"><br><br>
-        <button onclick="angle_type()">Descubir ángulo</button>
+        <label for="max">Escriba una cantidad de grados para descubrir el tipo de ángulo:</label>
+        <input type="text" id="arr" size="1"><br><br>
+        <button type="button" onclick="tipoAngulo();">Encontrar la cadena</button>
+    </div>
+
+    <br><br>
+    <div style="text-align:center;color:red;font-weight:bold;">
+        <p id="resp"></p>
     </div>
 
     <script>
-        function angle_type(angle) {
-            if (angle<90) {
-                alert("ángulo agudo");
+        function tipoAngulo() {
+            var ar = document.getElementById("arr").value;
+            ar = ar.trim();
+            var angulo = parseInt(ar);
+            if (angulo < 90 && angulo > 0) {
+                document.getElementById("resp").innerHTML = "Los " + angulo + " grados escritos corresponden a un ángulo agudo.";
             }
-            if (angle===90) {
-                alert("Angulo recto");
+            else if (angulo === 90) {
+                document.getElementById("resp").innerHTML = "Los " + angulo + " grados escritos corresponden a un ángulo recto.";
             }
-            if (angle<180) {
-                alert("Angulo obtuso");
+            else if (angulo < 180 && angulo > 90) {
+                document.getElementById("resp").innerHTML = "Los " + angulo + " grados escritos corresponden a un ángulo obtuso.";
             }
-            alert("Angulo recto");
+            else if (angulo === 180) {
+                document.getElementById("resp").innerHTML = "Los " + angulo + " grados escritos corresponden a un ángulo llano.";
+            }
         }
-        console.log(angle_type(48));
-        console.log(angle_type(90));
-        console.log(angle_type(170));
     </script>
 </body>
 

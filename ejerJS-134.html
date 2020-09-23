@@ -17,26 +17,33 @@
     </div>
 
     <div style="text-align: center;">
-        <label for="str">Escriba un arreglo:</label>
-        <input type="text" id="str"><br><br>
-        <button onclick="alphabet_change()">Crear arreglo</button>
+        <label for="max">Escriba un arreglo:</label>
+        <input type="text" id="arr"><br><br>
+        <button onclick="alphabet_change()">Encontrar la cadena</button>
     </div>
 
     <div style="text-align: center;color:red;font-weight:bold;">
         <p id="resp"> </p>
 
     <script>
-        function alphabet_change(str) {
-            var all_chars = str.split("");
-            for (var i = 0; i < all_chars.length; i++) {
-                var n = all_chars[i].charCodeAt() - 'a'.charCodeAt();
-                n = (n + 1) % 26;
-                all_chars[i] = String.fromCharCode(n + 'a'.charCodeAt());
+        function alphabet_change() {
+            var alfabeto = "abcdefghijklmnopqrstuvwxyz";
+            var ar = document.getElementById("arr").value;
+            ar = ar.trim();
+            var res = "";
+            for(var i = 0; i < ar.length; i++){
+                var tmp = ar[i];
+                for(var j = 0; j < alfabeto.length; j++){
+                    var t = alfabeto[j];
+                    if(t === tmp)
+                        if(t === "z")
+                            res = res + "a";
+                        else
+                            res = res + alfabeto[j + 1];
+                }
             }
-            return all_chars.join("");
-            document.getElementById("resp").innerHTML = "El nuevo arreglo obtenido es: [" + all_chars + "]";
+            document.getElementById("resp").innerHTML = "El nuevo arreglo obtenido es: [" + res + "]";
         }
-        console.lof(alphabet.change("abcdefghij"));
     </script>
 </body>
 

@@ -11,19 +11,31 @@
     <h2>Escriba un JavaScript para encontrar la cadena más larga de una matriz dada de cadenas. R:83
     </h2>
 
-    <label for="max">Primera Cadena:</label>
-    <input type="text" id="arra"><br><br>
-    <button type="button" onclick="encuentra_cadena();">Encontrar la cadena</button>
+    <div style="text-align: center;">
+        <label for="max">Escriba un arreglo de cadenas separadas por una coma:</label>
+        <input type="text" id="arra"><br><br>
+        <button type="button" onclick="encuentra_cadena();">Encontrar la cadena</button>
+    </div>
+    <br><br>
+    <div style="text-align:center;color:red;font-weight:bold;">
+        <p id="resp"> </p>
+    </div>
 
     <script>
-        function encuentra_cadena(arra) {
-            var max = arra[0].length;
-            arra.map(v => max = Math.max(max, v.length));
-            result = arra.filter(v => v.length == max);
-            return result
-            alert("La cadena más larga es: " + max);
+        function encuentra_cadena() {
+            var ar = document.getElementById("arra").value;
+            ar = ar.replace(/\s+/g,'');
+            ar = ar.split(',');
+            var arMax = ar[0];
+            for(var i = 1; i < ar.length; i++){
+                var tmp = ar[i];
+                if(tmp.length > arMax.length){
+                    arMax = tmp;
+                }
+            }
+            alert("La cadena más larga es: " + arMax);
         }
-        console.log(encuentra_cadena(['a', 'aa', 'aaa', 'aaaaaaaa', 'aaaa']));
+        // console.log(encuentra_cadena(['a', 'aa', 'aaa', 'aaaaaaaa', 'aaaa']));
     </script>
 </body>
 
