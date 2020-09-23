@@ -14,26 +14,22 @@
         R:8
     </h2>
 
-    <div style="text-align: center;">
-        <p>Haz click en el botón para ver si los números coinciden.</p><br><br>
-    </div>
 
     <div style="text-align: center;">
-        <label for="num">Escriba un número:</label>
-        <input type="text" id="guessnum"><br><br>
-        <button onclick="const num">Haz click</button>
+        <label for="num">En la ventana siguiente escriba un número del 1 al 10:</label>
+        <button onclick="adivinar()">Adivina el número!</button>
     </div>
 
 
     <script>
-        const num = Math.ceil(Math.random() * 10);
-        console.log(num);
-
-        const guessnum = propmt('Adivine el número entre 1 y 10 (ambos incluidos');
-        if (guessnum == num)
-        alert("Buen trabajo, coincide ya que el número es" + num);
+        function adivinar() {
+            const numLoco=Math.ceil(Math.random() * 10);
+            const num = prompt('Adivine el número entre 1 y 10 (ambos incluidos: ');
+            if (numLoco == num)
+                alert("Buen trabajo, coincide ya que el número es: " + num);
             else
-                alert("No coincide, ya que el numero es" + num);
+                alert("No coincide, ya que el número es: " + num + ", prueba otra vez!")
+        }
 
 
     </script>
